@@ -1,0 +1,12 @@
+{
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "baseUrl": "https://api.openai.com/v1",
+  "apiKey": "sk-...",
+  "maxTokens": 4096,
+  "temperature": 0,
+  "contextWindow": 128000,
+  "maxSteps": 25,
+  "approval": "none",
+  "workspace": "."
+}

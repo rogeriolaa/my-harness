@@ -1,0 +1,21 @@
+{
+  "name": "my-harness",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A tiny, readable LLM agent harness: the loop, the tools, and swappable provider adapters.",
+  "engines": {
+    "node": ">=23.6"
+  },
+  "scripts": {
+    "start": "node src/cli.ts",
+    "dev": "node --watch src/cli.ts",
+    "mock": "HARNESS_PROVIDER=mock node src/cli.ts",
+    "test": "node --test test/",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.8.0"
+  }
+}

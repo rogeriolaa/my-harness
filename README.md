@@ -1,5 +1,8 @@
 # my-harness
 
+[![CI](https://github.com/rogeriolaa/my-harness/actions/workflows/ci.yml/badge.svg)](https://github.com/rogeriolaa/my-harness/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 A tiny, readable LLM agent harness in ~3,300 lines of TypeScript.
 
 The goal is *understanding*, not features. You can read the whole thing in one
@@ -402,6 +405,30 @@ test/
 ```
 
 ---
+
+## Releases
+
+Versions follow [semver](https://semver.org/). The changelog lives in
+[CHANGELOG.md](CHANGELOG.md), in
+[Keep a Changelog](https://keepachangelog.com/en/1.1.0/) format.
+
+To cut a release:
+
+```bash
+# 1. Bump the version in package.json and add a CHANGELOG entry.
+npm version 0.2.0 --no-git-tag-version
+
+# 2. Commit, tag, push. The tag is what triggers the release.
+git commit -am "chore: release v0.2.0"
+git tag v0.2.0
+git push origin main --follow-tags
+```
+
+Pushing a `v*` tag runs the checks and publishes a GitHub release. The workflow
+fails if the tag doesn't match the version in `package.json`, so the two can't
+drift apart.
+
+`npm run version:check` validates the version on its own.
 
 ## Extend it
 

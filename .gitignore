@@ -5,3 +5,6 @@ smoke-out/
 
 # The Medium article is published separately, not in the repo.
 ARTICLE.md
+
+# Local working document, not part of the product.
+WORKPLAN.md

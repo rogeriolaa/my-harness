@@ -1,7 +1,8 @@
 {
   "name": "my-harness",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "description": "A tiny, readable LLM agent harness: the loop, the tools, and swappable provider adapters.",
   "engines": {
@@ -11,8 +12,9 @@
     "start": "node src/cli.ts",
     "dev": "node --watch src/cli.ts",
     "mock": "HARNESS_PROVIDER=mock node src/cli.ts",
-    "test": "node --test test/",
-    "typecheck": "tsc --noEmit"
+    "test": "node --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit",
+    "version:check": "node scripts/check-version.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
